@@ -260,7 +260,7 @@ class EditorJsColumns {
 
 			this.colWrapper.appendChild(col);
 
-			let editorjs_instance = new EditorJS({
+			let editorjs_instance = new (this.config.EditorJsLibrary || EditorJS)({
 				defaultBlock: "paragraph",
 				holder: editor_col_id,
 				tools: this.config.tools,
